@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Doctor</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Portfolio Doctor</h1>
+    <p>Investment Risk Analyzer</p>
+  </header>
+
+  <main>
+    <section>
+        <h2>Add Holding</h2>
+        <form id="holdingForm">
+          <input
+            id="symbolInput" type="text" placeholder="Symbol e.g. AAPL"
+            required>
+          <p id="symbolError"></p>
+          <input
+            id="sectorInput" type="text" placeholder="Sector e.g. Technology"
+            required>
+          <input
+            id="sharesInput" type="number" placeholder="Shares" min="1"
+            step="1" required>
+
+          <button id="addHoldingBtn">Add Holding</button>
+        </form>
+    </section>
+
+    <section>
+      <h2>Portfolio Summary</h2>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <p>Total Value</p>
+          <span>$<span id="totalValue">0</span></span>
+        </div>
+
+        <div class="summary-item">
+          <p>Number of Holdings</p>
+          <span id="holdingCount">0</span>
+        </div>
+
+        <div class="summary-item">
+          <p>Largest Position</p>
+          <span id="largestPosition">N/A</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Current Holdings</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Symbol</th>
+            <th>Sector</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Value</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="holdingsTableBody"></tbody>
+      </table>
+    </section>
+    
+    <div class="chart-grid">
+      <section>
+          <h2>Allocation Analysis</h2>
+
+          <ul id="allocationList"></ul>
+      </section>
+
+      <section>
+        <h2>Portfolio Allocation Chart</h2>
+        <div class="chart-container">
+          <canvas id="allocationChart"></canvas>
+        </div>
+      </section>
+
+      <section>
+          <h2>Sector Exposure</h2>
+          <ul id="sectorExposureList"></ul>
+      </section>
+
+      <section>
+        <h2>Sector Exposure Chart</h2>
+        <div class="chart-container">
+          <canvas id="sectorChart"></canvas>
+        </div>
+      </section>
+    </div>
+
+    <section>
+       <h2>Risk Report</h2>
+
+       <p>Risk Score: <span id="riskScore">0</span>/10</p>
+       <p>Portfolio Grade: <span id="portfolioGrade">N/A</span></p>
+
+       <div id="riskWarnings"></div>
+    </section>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/portfolioService.js"></script>
+  <script src="js/riskEngine.js"></script>
+  <script src="js/chartService.js"></script>
+  <script src="js/stockService.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
