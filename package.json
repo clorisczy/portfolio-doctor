@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-doctor",
+  "version": "1.0.0",
+  "description": "Portfolio Doctor is a full-stack investment portfolio risk analytics application that helps users analyze portfolio allocation, sector concentration, and investment risk using live stock market data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clorisczy/portfolio-doctor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/clorisczy/portfolio-doctor/issues"
+  },
+  "homepage": "https://github.com/clorisczy/portfolio-doctor#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}

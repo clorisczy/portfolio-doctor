@@ -75,5 +75,15 @@ function calculateSectorExposure(holdings) {
   });
 }
 
+if (typeof module !== "undefined") {
+  module.exports = {
+    calculateHoldingValue,
+    calculateTotalValue,
+    calculateLargestPosition,
+    calculateAllocation,
+    calculateSectorExposure
+  };
+}
+
 
 

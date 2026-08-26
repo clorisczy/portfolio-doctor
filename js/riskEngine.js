@@ -48,3 +48,10 @@ function calculatePortfolioGrade(riskScore) {
     return "F";
   }
 }
+// For Jest / Node testing
+if (typeof module !== "undefined") {
+  module.exports = {
+    calculateRiskReport,
+    calculatePortfolioGrade
+  };
+}
